@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pokpao Website ✨</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #080808;
+        color: #eee;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        animation: fadeIn 2s ease-in-out;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        opacity: 0;
+        animation: fadeInText 3s forwards;
+        animation-delay: 1s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInText {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .glow {
+        text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+        animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+        from { text-shadow: 0 0 5px #0ff; }
+        to { text-shadow: 0 0 25px #0ff, 0 0 45px #0ff; }
+    }
+
+    .moving {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: rgba(0,255,255,0.1);
+        border: 2px solid #0ff;
+        border-radius: 15%;
+        animation: moveBox 7s infinite linear;
+    }
+
+    @keyframes moveBox {
+        0% { transform: translate(-300px, -300px) rotate(0deg); }
+        50% { transform: translate(300px, 300px) rotate(180deg); }
+        100% { transform: translate(-300px, -300px) rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+
+<div class="moving"></div>
+<h1 class="glow">Welcome to Pokpao Website</h1>
+<p>GitHub Pages is now working 🎉🚀</p>
+
+</body>
+</html>
